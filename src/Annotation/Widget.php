@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\widgets\Annotation;
+namespace Drupal\widget_api\Annotation;
 
 use Drupal\Component\Annotation\Plugin;
 

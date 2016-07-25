@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\widgets\Plugin\Block;
+namespace Drupal\widget_api\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\widgets\Plugin\Widget\WidgetPluginManagerInterface;
+use Drupal\widget_api\Plugin\Widget\WidgetPluginManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
@@ -22,7 +22,7 @@ class WidgetBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * The widget interface.
    *
-   * @var \Drupal\widgets\Plugin\Widget\WidgetPluginManagerInterface
+   * @var \Drupal\widget_api\Plugin\Widget\WidgetPluginManagerInterface
    */
   private $widgetInterface;
 

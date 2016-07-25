@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\widgets\Plugin\Derivative;
+namespace Drupal\widget_api\Plugin\Derivative;
 
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\widgets\Plugin\Widget\WidgetPluginManagerInterface;
+use Drupal\widget_api\Plugin\Widget\WidgetPluginManagerInterface;
 
 /**
  * Class WidgetBlock.
@@ -15,7 +15,7 @@ class WidgetBlock extends DeriverBase implements ContainerDeriverInterface {
   /**
    * The widget interface.
    *
-   * @var \Drupal\widgets\Plugin\Widget\WidgetPluginManagerInterface
+   * @var \Drupal\widget_api\Plugin\Widget\WidgetPluginManagerInterface
    */
   private $widgetInterface;
 

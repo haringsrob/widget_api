@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\widgets;
+namespace Drupal\widget_api;
 
 /**
  * Class Widget.
@@ -10,7 +10,7 @@ class Widget {
   /**
    * Returns the plugin manager for the Widget plugin type.
    *
-   * @return \Drupal\widgets\Plugin\Widget\WidgetPluginManagerInterface
+   * @return \Drupal\widget_api\Plugin\Widget\WidgetPluginManagerInterface
    *   Widget manager.
    */
   public static function widgetPluginManager() {

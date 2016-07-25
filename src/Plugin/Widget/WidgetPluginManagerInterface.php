@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\widgets\Plugin\Widget;
+namespace Drupal\widget_api\Plugin\Widget;
 
 use Drupal\Component\Plugin\PluginManagerInterface;
 

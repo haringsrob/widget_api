@@ -6,7 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\widgets\Widget;
+use Drupal\widget_api\Widget;
 
 /**
  * Implements hook_help().
