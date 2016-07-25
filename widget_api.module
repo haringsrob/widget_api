@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains widgets.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\widgets\Widget;
+
+/**
+ * Implements hook_help().
+ */
+function widgets_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the widgets module.
+    case 'help.page.widgets':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Adds widgets to drupal 8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function widgets_theme() {
+  return Widget::widgetPluginManager()->getThemeImplementations();
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function widgets_theme_registry_alter(&$theme_registry) {
+  Widget::widgetPluginManager()->alterThemeImplementations($theme_registry);
+}
+
+/**
+ * Custom hook_preprocess function callback.
+ */
+function _widget_plugin_preprocess_widget(&$variables) {
+  $variables['widget'] = isset($variables['content']['content']) ? $variables['content']['content'] : [];
+}

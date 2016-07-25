@@ -1,0 +1,4 @@
+services:
+  plugin.manager.widget:
+    class: Drupal\widgets\Plugin\Widget\WidgetPluginManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler', '@theme_handler']
